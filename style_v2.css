@@ -232,6 +232,7 @@ canvas#space { z-index: 1; position: fixed; top:0; left:0; }
     border: 2px solid white;
     background: transparent;
     padding: 20px;
+    margin-left: 30px;
     margin-top: 15px;
     color: white;
     font-size: 1rem;
