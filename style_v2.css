@@ -60,25 +60,6 @@ html, body {
   align-items: center;
   margin-bottom: 10px;
 }
-.profile-small-note {
-    font-size: 0.7rem;
-    font-style: italic;
-    line-height: 1;
-    margin-top: -4px; /* поднимаем чуть выше */
-    margin-bottom: 4px;
-    background: linear-gradient(
-        270deg,
-        #9d4edd,
-        #7b2cbf,
-        #5a189a,
-        #3c096c,
-        #9d4edd
-    );
-    background-size: 600% 600%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: purpleFlow 20s ease infinite;
-}
 
 
 .avatar-frame {
