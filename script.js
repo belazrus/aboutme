@@ -4,24 +4,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.getElementById("logo");
   const intro = document.getElementById("intro");
 
-  // Показать текст через 0.5 сек
-  setTimeout(() => {
-    welcomeText.style.opacity = 1;
-  }, 500);
+  function safeRemoveIntro(){
+    if(intro){
+      intro.style.transition = 'opacity 0.6s ease';
+      intro.style.opacity = 0;
+      setTimeout(() => { try { intro.remove(); } catch {} }, 700);
+    }
+    if(logo) logo.style.opacity = 1;
+  }
 
-  // Убрать текст, переместить аватарку в угол через 2 сек
+  if(welcomeText) setTimeout(() => welcomeText.style.opacity = 1, 500);
+
   setTimeout(() => {
-    welcomeText.style.opacity = 0;
-    avatar.style.position = "absolute";
-    avatar.style.top = "20px";
-    avatar.style.left = "20px";
-    avatar.style.width = "40px";
+    if(avatar){
+      avatar.style.position = "absolute";
+      avatar.style.top = "20px";
+      avatar.style.left = "20px";
+      avatar.style.width = "40px";
+    }
+    if(welcomeText) welcomeText.style.opacity = 0;
   }, 2000);
 
-  // Показать логотип и убрать заставку через 3 сек
   setTimeout(() => {
-    logo.style.opacity = 1;
-    intro.style.opacity = 0;
-    setTimeout(() => intro.remove(), 1000);
-  }, 3000);
+    safeRemoveIntro();
+  }, 3200);
+
+  // Фолбэк: удалить заставку через 6 секунд, даже если что-то сломалось
+  setTimeout(safeRemoveIntro, 6000);
 });
