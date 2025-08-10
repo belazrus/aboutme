@@ -60,10 +60,12 @@ html, body {
   align-items: center;
   margin-bottom: 10px;
 }
-.profile-subtext {
-    font-size: 0.8rem;
+.profile-small-note {
+    font-size: 0.7rem;
     font-style: italic;
-    margin-top: 5px;
+    line-height: 1;
+    margin-top: -4px; /* поднимаем чуть выше */
+    margin-bottom: 4px;
     background: linear-gradient(
         270deg,
         #9d4edd,
@@ -75,13 +77,7 @@ html, body {
     background-size: 600% 600%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: purpleFlow 15s ease infinite;
-}
-
-@keyframes purpleFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    animation: purpleFlow 20s ease infinite;
 }
 
 
