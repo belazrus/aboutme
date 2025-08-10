@@ -229,7 +229,7 @@ canvas#space { z-index: 1; position: fixed; top:0; left:0; }
 
 /* About text block styles */
 .about-text {
-    overflow-wrap: break-word;
+    max-width: 300px;
     border: 2px solid white;
     background: transparent;
     padding: 20px;
