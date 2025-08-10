@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: sans-serif;
+  color: white;
+}
+
+/* Вступление */
+#intro {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('images/space_bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#intro.fade-out {
+  opacity: 0;
+}
+
+#welcome-text {
+  font-size: 3em;
+  color: white;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+/* Canvas */
+#space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Интерфейс */
+#ui {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#ui.show {
+  opacity: 1;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar-frame {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, violet, yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #4b0082, black) 1;
+    background: url('images/avatar.jpg') center/cover no-repeat;
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 15px #4b0082;
+    }
+    50% {
+        box-shadow: 0 0 25px #8000ff;
+    }
+}
+
+
+.username {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  cursor: default;
+}
+
+.icon {
+  margin-right: 5px;
+}
