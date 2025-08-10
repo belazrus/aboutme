@@ -229,17 +229,21 @@ canvas#space { z-index: 1; position: fixed; top:0; left:0; }
 
 /* About text block styles */
 .about-text {
-    white-space: pre;
     border: 2px solid white;
     background: transparent;
-    padding: 20px;
-    margin-left: 20px;
+    padding: 10px;
     margin-top: 15px;
     color: white;
     font-size: 1rem;
+    font-family: monospace;  /* ровные столбцы */
+    line-height: 1.4;        /* немного больше расстояния между строками */
     border-radius: 10px;
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 0px rgba(138, 43, 226, 0);
+    white-space: pre; /* сохраняем переносы как в коде */
+}
+.about-text strong {
+    font-weight: bold;
 }
 
 .about-text:hover {
